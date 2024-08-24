@@ -4,371 +4,456 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>My Portfolio</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #001523;
             color: white;
-            font-family: 'Lato', sans-serif;
+            font-family: 'Lora', serif;
             scroll-behavior: smooth;
         }
-        /* Navbar Styles */
+
         .navbar {
             background-color: #002b40;
             padding: 10px 0;
         }
+
         .navbar .navbar-nav .nav-link {
             color: white;
             font-size: 1.2rem;
             margin: 0 15px;
         }
+
         .navbar .navbar-nav .nav-link:hover {
             color: #00bcd4;
         }
+
         .navbar .navbar-brand {
             color: white;
             font-size: 1.5rem;
         }
-        .navbar .navbar-toggler-icon {
-            background-image: url('path/to/hamburger-icon.png');
+
+        h1 {
+            font-weight: bolder;
+            font-style: italic;
         }
-        h1, h2 {
+        h2 {
             margin-bottom: 20px;
         }
+
         .section {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 20px;
         }
+
         .social-icons {
             margin-top: 20px;
         }
+
         .social-icons a {
             color: white;
             font-size: 50px;
             margin: 0 10px;
             text-decoration: none;
         }
+
         .social-icons a:hover {
             color: #00bcd4;
         }
 
-        /* Second Section Style */
         .resume-section h2 {
             font-size: 3rem;
             margin-bottom: 40px;
-            padding-top: 500px;
         }
+
         .resume-section img {
-            max-width: 50%;
+            max-width: 1000px;
             height: auto;
             margin: 0 auto;
             display: block;
         }
+
         .resume-buttons {
             margin-top: 20px;
         }
+
         .resume-buttons a {
             margin: 0 10px;
         }
-        /* Third Section Styles */
+
         .tech-stack {
             text-align: center;
             padding: 50px 0;
-            margin-top: 70px;
-            margin-bottom: 20px;
-            padding-top: 700px;
-            padding-bottom: 150px;
         }
+
         .tech-stack h2 {
             font-size: 3rem;
             margin-bottom: 30px;
         }
+
         .tech-stack .icon {
             font-size: 90px;
             margin: 0 8px;
         }
-        /* Fourth Section Styles */
+
         .certificates {
             background-color: #002b40;
             padding: 50px 15px;
         }
+
         .certificates h2 {
             font-size: 3rem;
             margin-bottom: 40px;
         }
+
         .certificate {
             display: flex;
             align-items: center;
             margin-bottom: 30px;
+            flex-wrap: wrap;
         }
+
         .certificate img {
-            max-width: 300px;
+            max-width: 500px;
             height: auto;
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
-        .certificate:nth-of-type(2) {
-            flex-direction: row-reverse;
-        }
+
         .certificate .caption {
             flex: 1;
             font-size: 1.2rem;
             text-align: justify;
+            margin-right: 50px;
+            margin-left: 50px;;
         }
+
         .certificate .title {
             font-weight: bold;
             font-size: 2rem;
             margin-bottom: 10px;
         }
-        /* Fifth Section Styles */
+
         .projects {
             padding: 70px 15px;
-            margin-top: 50px;
         }
+
         .projects h2 {
             font-size: 3rem;
             padding-top: 10px;
             margin-bottom: 40px;
         }
+
         .project {
             display: flex;
             align-items: center;
             margin-bottom: 60px;
+            flex-wrap: wrap;
         }
+
         .project img {
             max-width: 700px;
             height: auto;
-            margin-right: 30px;
+            margin-bottom: 30px;
+            margin-left: 70px;
+            margin-right: 70px;
+
         }
-        .project:nth-of-type(2) {
-            flex-direction: row-reverse;
-        }
+
         .project .content {
             flex: 1;
         }
+
         .project .content .title {
             font-weight: bold;
             font-size: 2rem;
             margin-bottom: 15px;
+            padding-left: 30px;
         }
+
         .project .content .caption {
             font-size: 1.2rem;
             margin-bottom: 15px;
             text-align: justify;
+            padding-left: 30px;
         }
+
         .project .content .icons {
             font-size: 36px;
             margin-top: 10px;
+            padding-left: 30px;
         }
+
         .project .content .icons i {
-            margin-right: 20px;
+            margin-right: 0px;
+
         }
-        /* Sixth Section: Contact Me */
+        .btn.btn-primary.mt-3 {
+
+            margin-left: 30px;
+        }
+
         .contact-me {
             padding: 50px 0;
             background-color: #002b40;
         }
+
         .contact-me h2 {
             font-size: 3rem;
             margin-bottom: 10px;
             text-align: center;
         }
+
         .contact-me .social-icons {
             display: flex;
             justify-content: center;
             margin-top: 5px;
         }
+
         .contact-me .social-icons a {
             color: white;
             font-size: 36px;
             margin: 0 15px;
             text-decoration: none;
         }
-        /* Footer Styles */
+
         .footer {
             background-color: #002b40;
             padding: 20px 0;
             color: white;
             text-align: center;
         }
+
         .footer a {
             color: #00bcd4;
             text-decoration: none;
             margin: 0 10px;
         }
+
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .navbar .navbar-nav .nav-link {
+                font-size: 1rem;
+                margin: 0 5px;
+            }
+
+            .social-icons a {
+                font-size: 40px;
+            }
+
+            .resume-section h2,
+            .tech-stack h2,
+            .certificates h2,
+            .projects h2,
+            .contact-me h2 {
+                font-size: 2rem;
+            }
+
+            .project .content .icons {
+                font-size: 20px;
+            }
+
+            .tech-stack .icon {
+                font-size: 60px;
+            }
+
+            .certificate .title,
+            .project .content .title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .tech-stack .icon {
+                font-size: 50px;
+                margin: 0 5px;
+            }
+
+            .certificate .title,
+            .project .content .title {
+                font-size: 1.2rem;
+            }
+
+            .project .content .icons {
+                font-size: 18px;
+                margin-top: 5px;
+            }
         }
     </style>
 </head>
 
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Hi There!</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#resume">Resume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#tech-stack">Tech Stack</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#certificates">Certificates</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hi There!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tech-stack">Tech Stack</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- First Section -->
     <div id="home" class="section">
         <h1>&lt;Hello World /&gt;</h1>
         <h2>I'm Xyrill M. To-ong, an Information Technology Student</h2>
-        <h2>from the University of Mindanao</h2>
-        <div class="social-icons">
+        <h2>from the University of Mindanao.</h2>
+        <div class="social-icons"></div>
+    </div>
+
+    <!-- Second Section: Resume -->
+    <div id="resume" class="section resume-section">
+        <h2>Resume</h2>
+        <img src="images/resume.jpg" alt="Resume">
+        <div class="resume-buttons">
+            <a href="https://drive.google.com/file/d/1-yIE-IIxLPwHzuomtCOORxozJIF__mR8/view?usp=sharing"
+               class="btn btn-primary" target="_blank" rel="noopener noreferrer" download>View Full Resume</a>
+            <a href="https://drive.google.com/uc?export=download&id=1-yIE-IIxLPwHzuomtCOORxozJIF__mR8"
+               class="btn btn-secondary" target="_blank" rel="noopener noreferrer" download>Download Resume</a>
         </div>
     </div>
 
-<!-- Second Section: Resume -->
-<div id="resume" class="section resume-section">
-    <h2>Resume</h2>
-    <img src="images/resume.jpg" alt="Resume">
-    <div class="resume-buttons">
-        <a href="https://drive.google.com/file/d/1-yIE-IIxLPwHzuomtCOORxozJIF__mR8/view?usp=sharing"
-           class="btn btn-primary" target="_blank" rel="noopener noreferrer" download>View Full Resume (PDF)</a>
-        <a href="https://drive.google.com/uc?export=download&id=1-yIE-IIxLPwHzuomtCOORxozJIF__mR8" class="btn btn-secondary"
-           download>Download Resume (PDF)</a>
+    <!-- Third Section: Tech Stack -->
+    <div id="tech-stack" class="section tech-stack">
+        <h2>My Tech Stack</h2>
+        <div>
+            <i class="fa-brands fa-python icon"></i>
+            <i class="fa-brands fa-docker icon"></i>
+            <i class="fa-solid fa-database icon"></i>
+            <i class="fa-brands fa-bootstrap icon"></i>
+            <i class="fa-brands fa-html5 icon"></i>
+            <i class="fa-brands fa-css3 icon"></i>
+            <i class="fa-brands fa-git-alt icon"></i>
+        </div>
     </div>
-</div>
 
-
-<!-- Third Section: Tech Stack -->
-<div id="tech-stack" class="section tech-stack">
-    <h2>My Tech Stack</h2>
-    <div class="icons">
-        <i class="fab fa-python icon"></i>
-        <i class="fab fa-docker icon"></i>
-        <i class="fab fa-django icon"></i>
-        <i class="fab fa-html5 icon"></i>
-        <i class="fab fa-css3-alt icon"></i>
-        <i class="fab fa-bootstrap icon"></i>
-        <i class="fab fa-git icon"></i>
-    </div>
-</div>
-
-<!-- Fourth Section: Certificates -->
-<div id="certificates" class="section certificates">
-    <h2>Certificates</h2>
-    <div class="certificate">
-        <img src="images/databases.png" alt="Certiport IT Specialist - Databases">
-        <div class="caption">
-            <div class="title">Certiport IT Specialist - Databases</div>
-            <div class="description">I am certified as an IT Specialist in Databases by Certiport, demonstrating foundational knowledge <br />
-                of how to design and query relational databases such as MySQL. This certification highlights <br />
+    <!-- Fourth Section: Certificates -->
+    <div id="certificates" class="section certificates">
+        <h2>Certificates</h2>
+        <div class="certificate">
+            <img src="images/databases.png" alt="Certiport IT Specialist - Databases">
+            <div class="caption">
+                <div class="title">Certiport IT Specialist - Databases</div>
+                <div>I am certified as an IT Specialist in Databases by Certiport, demonstrating foundational knowledge
+                of how to design and query relational databases such as MySQL. This certification highlights
                 my expertise in database management and SQL, ensuring efficient and secure data handling.</div>
+            </div>
+        </div>
+        <div class="certificate">
+            <img src="images/cybersecurity.png" alt="Certiport IT Specialist - Cybersecurity">
+            <div class="caption">
+                <div class="title">Certiport IT Specialist - Cybersecurity</div>
+                <div>I am a certified IT Specialist in Cybersecurity from Certiport. It demonstrates my proficiency in key areas
+                such as threat identification, risk management, and security best practices. With this credential, I have proven my ability to safeguard information systems and protect
+                sensitive data from potential cyber threats, establishing myself as a capable
+                professional in the field of cybersecurity.</div>
+            </div>
+        </div>
+         <div class="certificate">
+            <img src="images/networking.jpg" alt="Certificate of Completion: Cisco CCNA 200-301">
+            <div class="caption">
+                <div class="title">Certiport IT Specialist - Cybersecurity</div>
+                <div>I completed comprehensive training in networking fundamentals, covering key concepts,
+                    configurations, and troubleshooting techniques essential for managing and
+                    maintaining network systems..</div>
+            </div>
         </div>
     </div>
-    <div class="certificate">
-        <img src="images/cybersecurity.png" alt="Certiport IT Specialist - Cybersecurity">
-        <div class="caption">
-            <div class="title">Certiport IT Specialist - Cybersecurity</div>
-            <div class="description">I am a certified IT Specialist in Cybersecurity from Certiport. This certification validates my foundational <br />
-                expertise in cybersecurity principles and practices. It demonstrates my proficiency in key areas <br />
-                such as threat identification, risk management, and security best practices. With this <br /> credential, I have proven my ability to safeguard information systems and protect <br />
-                sensitive data from potential cyber threats, establishing myself as a capable <br />
-                professional in the field of cybersecurity. </div>
-        </div>
-    </div>
-</div>
 
-<!-- Fifth Section: Projects -->
-<div id="projects" class="section projects">
-    <h2>Ongoing and Completed Projects</h2>
-    <div class="project">
-        <img src="images/packandgo.png" alt="Pack & Go">
-        <div class="content">
-            <div class="title">Pack & Go</div>
-            <div class="caption">Pack & Go app is a web app that uses modern tech like webhooks to make booking and planning moves easier. <br />
-                Developed with Laravel framework, Vue.js, and PostgreSQL, and following Agile Scrum Methodology. <br />
-                Features like seamless appointment booking, real-time communication, and booking <br />
+    <!-- Fifth Section: Projects -->
+    <div id="projects" class="section projects">
+        <h2>Ongoing and Completed Projects</h2>
+        <div class="project">
+            <div class="content">
+                <div class="title">Pack & Go</div>
+                <div class="caption">Pack & Go app is a web app that uses modern tech like webhooks to make booking and planning moves easier.
+                Developed with Laravel framework, Vue.js, and PostgreSQL, and following Agile Scrum Methodology.
+                Features like seamless appointment booking, real-time communication, and booking
                 management aims to simplify moving for customers and service providers.</div>
-            <div class="icons">
-                <i class="fab fa-laravel"></i>
-                <i class="fab fa-vuejs"></i>
-                <i class="fa-solid fa-database"></i>
-                <i class="fab fa-docker"></i>
-                <a href="https://github.com/xxyrill/pack-and-go-booking-app" target="_blank" class="btn btn-primary">View Code</a> <!-- Button to view code -->
+                <div class="icons">
+                    <i class="fa-brands fa-laravel"></i>
+                    <i class="fa-brands fa-vuejs"></i>
+                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-brands fa-docker"></i>
+                </div>
+                <a href="https://github.com/xxyrill/pack-and-go-booking-app" class="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer">View Code</a>
             </div>
+            <img src="images/pack-and-go.png" alt="Pack & Go">
         </div>
-    </div>
-    <div class="project">
-        <img src="images/jrindr.png" alt="Jrindr">
-        <div class="content">
-            <div class="title">Jrindr</div>
-            <div class="caption">Jrindr is a social media app where users can sign up, create, share, edit, <br />
-                and delete posts. Built with Django REST, React.js, Docker, and <br />
-                PostgreSQL, Jrindr offers a smooth and easy-to-use experience <br />
+        <div class="project">
+            <img src="images/jrindr.png" alt="Jrindr">
+            <div class="content">
+                <div class="title">Jrindr</div>
+                <div class="caption">Jrindr is a social media app where users can sign up, create, share, edit,
+                and delete posts. Built with Django REST, React.js, Docker, and
+                PostgreSQL, Jrindr offers a smooth and easy-to-use experience
                 for managing and interacting with posts.</div>
-            <div class="icons">
-                <i class="fab fa-python"></i>
-                <i class="fab fa-react"></i>
-                <i class="fab fa-docker"></i>
-                <i class="fa-solid fa-database"></i>
-                <a href="https://github.com/xxyrill/jrindr" target="_blank" class="btn btn-primary">View Code</a> <!-- Button to view code -->
+                <div class="icons">
+                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-brands fa-react"></i>
+                    <i class="fa-brands fa-docker"></i>
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <a href="https://github.com/xxyrill/jrindr" class="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer">View Code</a>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Sixth Section: Contact Me -->
-<div id="contact" class="section contact-me">
-    <h2>Contact Me</h2>
-    <div class="social-icons">
-        <a href="https://github.com/xxyrill" target="_blank" class="fab fa-github"></a>
-        <a href="https://www.linkedin.com/in/xyrill-to-ong-808441208/" target="_blank" class="fab fa-linkedin"></a>
-        <a href="mailto:x.to-ong.479701@umindanao.edu.ph" class="fas fa-envelope"></a>
+    <!-- Contact Section -->
+    <div id="contact" class="section contact-me">
+        <h2>Contact Me</h2>
+        <div class="social-icons">
+            <a href="mailto:x.to-ong.479701@umindanao.edu.ph" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/xyrill-to-ong-808441208/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/xxyrill" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </div>
-</div>
 
-<!-- Footer -->
-<footer class="footer">
-    <p>&copy; 2024 Xyrill M. To-ong. All rights reserved.</p>
-    <p>
-        <a href="#home">Home</a> |
-        <a href="#resume">Resume</a> |
-        <a href="#tech-stack">Tech Stack</a> |
-        <a href="#certificates">Certificates</a> |
-        <a href="#projects">Projects</a> |
-        <a href="#contact">Contact</a>
-    </p>
-</footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div>© 2024 Xyrill M. To-ong. All Rights Reserved.</div>
+    </footer>
 
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 </html>
